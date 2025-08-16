@@ -11,12 +11,8 @@ const RoomCreator = ({ onJoinRoom }) => {
     
     setIsCreating(true)
     try {
-      const serverUrl = import.meta.env.VITE_SERVER_URL || window.location.origin
-      const apiUrl = import.meta.env.PROD 
-        ? `${serverUrl}/api/api/create-room`
-        : `${serverUrl}/api/create-room`
-      
-      const response = await fetch(apiUrl, {
+      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001'
+      const response = await fetch(`${serverUrl}/api/create-room`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       })
@@ -33,12 +29,8 @@ const RoomCreator = ({ onJoinRoom }) => {
     
     setIsJoining(true)
     try {
-      const serverUrl = import.meta.env.VITE_SERVER_URL || window.location.origin
-      const apiUrl = import.meta.env.PROD 
-        ? `${serverUrl}/api/api/room/${roomId.trim()}`
-        : `${serverUrl}/api/room/${roomId.trim()}`
-      
-      const response = await fetch(apiUrl)
+      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001'
+      const response = await fetch(`${serverUrl}/api/room/${roomId.trim()}`)
       if (response.ok) {
         onJoinRoom(roomId.trim(), username.trim())
       } else {

@@ -10,13 +10,9 @@ function App() {
   const [username, setUsername] = useState('')
 
   useEffect(() => {
-    // For Firebase, we'll use the functions URL
-    const serverUrl = import.meta.env.VITE_SERVER_URL || window.location.origin
-    const socketUrl = import.meta.env.PROD 
-      ? `${serverUrl}/socketio` 
-      : 'http://localhost:3001'
-    
-    const newSocket = io(socketUrl)
+    // Use environment variable or fallback to localhost for development
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001'
+    const newSocket = io(serverUrl)
     setSocket(newSocket)
 
     return () => newSocket.close()

@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "your-project-id"
-  }
+    "default": "your-project-id",
+    "prod": "quick-chat-app-f71a1"
+  },
+  "targets": {},
+  "etags": {}
 }

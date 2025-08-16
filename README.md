@@ -78,29 +78,24 @@ Perfect for quick team discussions, temporary support chats, or casual conversat
 
 ## 🚀 Free Deployment Options
 
-### Option 1: Firebase (Google - Completely Free)
-1. Install Firebase CLI: `npm install -g firebase-tools`
-2. Login: `firebase login`
-3. Create project at [Firebase Console](https://console.firebase.google.com)
-4. Run: `firebase init` (select Functions + Hosting)
-5. Deploy: `firebase deploy`
-6. **See [FIREBASE_DEPLOY.md](FIREBASE_DEPLOY.md) for detailed guide**
-
-### Option 2: Render (Recommended - Easiest)
+### Option 1: Render (Recommended - Easiest & Free)
 1. Fork this repo to your GitHub
 2. Go to [render.com](https://render.com) and sign up (free)
 3. Click "New Web Service" and connect your GitHub repo
 4. Render will auto-detect the `render.yaml` config
 5. Deploy! Your app will be live at `https://your-app-name.onrender.com`
 
-### Option 2: Railway
+### Option 2: Railway (Also Great & Free)
 1. Fork this repo to your GitHub
 2. Go to [railway.app](https://railway.app) and sign up (free)
 3. Click "Deploy from GitHub repo" and select your fork
 4. Railway will auto-detect the `railway.json` config
 5. Deploy! Your app will be live at `https://your-app-name.up.railway.app`
 
-### Option 3: Heroku (if you have access)
+### Option 3: Firebase (Frontend Only - See FIREBASE_DEPLOY.md)
+**Note**: Firebase Functions don't work well with Socket.IO. Use Render/Railway for full-stack.
+
+### Option 4: Heroku (if you have access)
 1. Fork this repo to your GitHub
 2. Create a new Heroku app
 3. Connect your GitHub repo

@@ -78,7 +78,15 @@ Perfect for quick team discussions, temporary support chats, or casual conversat
 
 ## 🚀 Free Deployment Options
 
-### Option 1: Render (Recommended - Easiest)
+### Option 1: Firebase (Google - Completely Free)
+1. Install Firebase CLI: `npm install -g firebase-tools`
+2. Login: `firebase login`
+3. Create project at [Firebase Console](https://console.firebase.google.com)
+4. Run: `firebase init` (select Functions + Hosting)
+5. Deploy: `firebase deploy`
+6. **See [FIREBASE_DEPLOY.md](FIREBASE_DEPLOY.md) for detailed guide**
+
+### Option 2: Render (Recommended - Easiest)
 1. Fork this repo to your GitHub
 2. Go to [render.com](https://render.com) and sign up (free)
 3. Click "New Web Service" and connect your GitHub repo
